@@ -9,8 +9,8 @@
     <!-- css link -->
     <link rel="stylesheet" href="./assets/styles/main.css">
     <!-- js link -->
-    <script src="./assets/scripts/vendor.js"></script>
-    <script src="./assets/scripts/app.js"></script>
+    <script src="./assets/scripts/vendor.js" defer></script>
+    <script type= "module" src="./assets/scripts/app.js" defer></script>
 </head>
 <body>
     <div class="wrapper">
@@ -19,17 +19,7 @@
         </header>
         <section>
             <h2><span id="begin">1</span>부터 <span id="end">100</span>사이의 숫자를 클릭하세요!</h2>
-            <div class="numbers">
-                <div class="icon">1</div>
-                <div class="icon">2</div>
-                <div class="icon">3</div>
-                <div class="icon">4</div>
-                <div class="icon">5</div>
-                <div class="icon">6</div>
-                <div class="icon">7</div>
-                <div class="icon">8</div>
-                <div class="icon">9</div>
-                <div class="icon">10</div>
+            <div id="numbers">
             </div>
         </section>
         <aside>

@@ -47,49 +47,51 @@ a {
     color: rgb(1, 5, 240);
   }
 
-  div.numbers {
-    height: 500px;  
+  div#numbers {
+    height: 550px;  
+    margin: 20px 20px 30px 60px;
     display: flex;
-    margin: 30px;
-    
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow: auto;
   }
 
-  div.numbers .icon {
+  div#numbers .icon {
     color: #fff;
     font-size: 1.3rem;
     font-weight: 700;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     text-align: center;
-    line-height: 70px;
+    line-height: 60px;
     cursor: pointer;
     box-shadow: 3px 5px 0px rgba(0, 0, 0, 0.8);
+    margin: 30px;
   }
 
-  div.numbers .icon:hover {
+  div#numbers .icon:hover {
     transform: scale(1.2);
     opacity: 0.9;
   }
 
-  div.numbers .icon:nth-child(5n) {
+  div#numbers .icon:nth-child(5n) {
     background-color: rgb(247, 210, 0);
   }
 
-  div.numbers .icon:nth-child(5n-1) {
+  div#numbers .icon:nth-child(5n-1) {
     background-color: rgb(0, 160, 8);
   }
 
-  div.numbers .icon:nth-child(5n-2) {
+  div#numbers .icon:nth-child(5n-2) {
     background-color: rgb(255, 42, 42);
   }
 
-  div.numbers .icon:nth-child(5n-3) {
+  div#numbers .icon:nth-child(5n-3) {
     background-color: rgb(43, 64, 255);
   }
 
-  div.numbers .icon:nth-child(5n-4) {
+  div#numbers .icon:nth-child(5n-4) {
     background-color: rgb(255, 116, 23);
   }
 

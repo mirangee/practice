@@ -1,18 +1,3 @@
-let todoData = [{
-  id: 1,
-  text: '할 일 1',
-  done: false
-},
-{
-  id: 2,
-  text: '할 일 2',
-  done: false
-},
-{
-  id: 3,
-  text: '할 일 3',
-  done: false
-}];
 
 export default function addList() {
 
@@ -32,7 +17,6 @@ export default function addList() {
     };
 
     todoData.push(todo);
-    console.log(todoData);
 
     // 텍스트가 있으면 li 요소 생성 후 덧붙이기
     makeElements(todo);

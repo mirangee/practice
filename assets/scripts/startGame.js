@@ -31,6 +31,7 @@ export default function startGame() {
         if (randomNumber === pickedNumber) {
             // 1. .win 보이면서 몇 번만에 맞혔는지 보여주기
             $win.style.opacity = 1;
+            $win.style.zIndex = 10;
             $chance.textContent = clickCount;
 
             // 2.  up, down 아이콘 움직임 멈추기
@@ -92,7 +93,7 @@ function makeIconList() {
     for (let i = 1; i <= 100; i++) {
         const $numberBall = document.createElement('div');
         $numberBall.classList.add('icon');
-        $numberBall.textContent = `${i}`;
+        $numberBall.textContent = i;
         $numberBall.dataset.value = i;
         $frag.appendChild($numberBall);
     }

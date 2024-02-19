@@ -15,3 +15,5 @@ const $checkInput = document.querySelector('input[type=checkbox]');
 
 const $label = document.querySelector('.checkbox');
 const $text = document.querySelector('.text');
+
+const $newInput = document.querySelector('.modify-input');

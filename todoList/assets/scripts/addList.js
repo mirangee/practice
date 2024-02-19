@@ -1,5 +1,10 @@
 
 export default function addList() {
+  // $todoText.addEventListener('keyup', e => {
+  //   if (e.keyCode === 13) {
+  //     alert('입력했다!');
+  //   }
+  // })
 
   // input에 텍스트가 작성되었는지 확인
   if ($todoText.value.trim() === '') {

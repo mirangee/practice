@@ -1,5 +1,6 @@
 import addList from "./addList.js"; 
 import checkList from "./checkList.js";
+import removeList from "./removeList.js";
 
 
 
@@ -19,6 +20,11 @@ import checkList from "./checkList.js";
   })
 
   // 할 일 삭제 버튼 이벤트 핸들러
-
+  $todoList.addEventListener('click', (e) => {
+    if (!e.target.matches('.remove .lnr-cross-circle')) {
+      return;
+    } 
+    removeList(e.target.parentNode.parentNode);
+  })
   // 할 일 수정 버튼 이벤트 핸들러
 })();

@@ -1,7 +1,10 @@
 import addList from "./addList.js";
 import checkList from "./checkList.js";
 import removeList from "./removeList.js";
-import {modifyList, completeModList} from "./modifyList.js";
+import {
+  modifyList,
+  completeModList
+} from "./modifyList.js";
 
 
 // 즉시 실행 함수
@@ -9,6 +12,14 @@ import {modifyList, completeModList} from "./modifyList.js";
   // 할 일 추가 버튼 이벤트 핸들러
   $addBtn.addEventListener('click', () => {
     addList();
+  })
+
+  // enter 눌렀을 때도 할 일 추가 이벤트 발생
+  $todoText.addEventListener('keydown', event => {
+    if (event.key === 'Enter') {
+      $addBtn.click();
+      event.preventDefault();
+    }
   })
 
   // 할 일 체크 버튼 이벤트 핸들러
@@ -31,10 +42,11 @@ import {modifyList, completeModList} from "./modifyList.js";
   $todoList.addEventListener('click', (e) => {
     if (e.target.matches('.lnr-undo')) {
       modifyList(e.target.parentNode.parentNode);
-    } else if(e.target.matches('.lnr-checkmark-circle')) { // 수정 완료 이벤트 핸들러
+    } else if (e.target.matches('.lnr-checkmark-circle')) { // 수정 완료 이벤트 핸들러
       completeModList(e.target.parentNode.parentNode);
     } else {
-      return;      
+      return;
     }
   })
+
 })();

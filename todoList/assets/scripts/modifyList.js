@@ -12,8 +12,18 @@ function modifyList($li) {
     $newInput.value = $li.firstElementChild.lastElementChild.textContent;
     $li.firstElementChild.replaceChild($newInput, $li.firstElementChild.lastElementChild);
 
+    //focus 옮기기
+    $newInput.focus();
+
     // .modify .lnr-undo 가 .lnr-checkmark-circle 변화
     $li.firstElementChild.nextElementSibling.firstElementChild.classList.replace('lnr-undo', 'lnr-checkmark-circle');
+    
+    // 할 일 수정 후 enter 키 눌렀을 때도 할 일 수정 완료되도록
+    $newInput.addEventListener('keydown', event => {
+        if (event.key === 'Enter') {
+            $li.firstElementChild.nextElementSibling.firstElementChild.click();
+        }
+    })
 }
 
 function completeModList($li) {
